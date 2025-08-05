@@ -11,7 +11,7 @@ export default defineConfig({
   title,
   description,
   cleanUrls: true,
-  outDir: '.vercel/output/static',
+  outDir: '.vitepress/dist',
   srcExclude: ['**/README.md'],
   vite: {
     resolve: {
