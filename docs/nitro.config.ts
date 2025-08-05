@@ -3,7 +3,7 @@ import replace from '@rollup/plugin-replace';
 
 export default defineNitroConfig({
   compatibilityDate: '2025-07-30',
-  preset: 'vercel_edge',
+  preset: 'cloudflare_pages',
   srcDir: '.vitepress',
   routeRules: {
     '/api/**': { cors: false },
@@ -15,7 +15,7 @@ export default defineNitroConfig({
         targets: [
           {
             src: './node_modules/@resvg/resvg-wasm/index_bg.wasm',
-            dest: './.vercel/output/functions/__nitro.func',
+            dest: './.output/public',
           },
         ],
       }),
